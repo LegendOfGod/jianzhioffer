@@ -60,6 +60,7 @@ public class Solution {
         if (k == chars.length - 1) {
             return true;
         }
+        //走过的路径不能再走了
         board[i][j] = '\0';
         //其他情况还需要继续递归  递归的方向是上下左右四个方向
         boolean res = existHead(board, chars, i - 1, j, k + 1) || existHead(board, chars, i + 1, j, k + 1)
